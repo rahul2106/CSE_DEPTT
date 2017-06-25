@@ -1,0 +1,688 @@
+<?php 
+//include 'connect.php';
+include 'functions.php';
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CSES | Events</title>
+<!-- Linking CSS-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css"  media="screen">
+<link rel="stylesheet" href="css/carousal.css"  media="screen">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/libs/animate.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="blog.css" >
+<script src="js/bootstrap-tabs.js" > </script>
+  <link  rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css " />
+  <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+  <link rel="stylesheet" type="text/css" href="css/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="css/colors/color_1.css" id="colors-style" />
+  <link rel="stylesheet" type="text/css" href="css/switcher.css" />
+  <link rel="stylesheet" type="text/css" href="css/liquid-slider.css"/>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900|Dosis:300,400,700|Oswald:300">
+<!-- end Linking CSS-->
+<style type="text/css">
+body{
+background-color: white;
+}
+p
+{
+  width:78%;
+  font-size: 14px;
+}
+h1{
+  /*font-family: Verdana,Arial,Helvetica,sans-serif;*/
+  font-size: 35px;
+}
+#events_total h2
+{
+ /*font-family: Verdana,Arial,Helvetica,sans-serif;*/
+ color: black;
+}
+
+#content p {
+  width:70%;
+}
+
+a#functions_events_navlink
+{
+    color:rgb(0,153,255);
+}
+#events_total img
+{
+  margin: 10px;
+  height: 310px;
+  width: 280px;
+  float:right;
+}
+
+#events_total
+{
+
+  top:20%;
+  margin-left:5%;
+  text-align: justify;
+  width: 80%;
+  line-height: 2;
+}
+table,tr,td{
+  clear:both;
+  text-align: center;
+  text-color: black;
+  padding: 10px;
+  margin:10px;
+  width: auto;
+}
+
+#events_total h1
+
+{ clear:both;
+  font-weight: 800;
+  font-variant: bold;
+}
+
+.venue {
+  background:rgb(229, 225, 225);
+}
+#Footer
+{
+    height: auto;
+    width: 100%;
+    
+    /*top: 2500px;*/
+    background-color: #102949;
+    font-family: 'CartoGothicStdBook',Arial,Helvetica,sans-serif !important;
+    color: white;
+}
+
+
+#topcontent p {
+  float:left;
+  margin-left:3%;
+  width: 70%;
+}
+
+h1,h2,h3,h4 {
+  clear:both;
+}
+
+.table {
+  width:97%;
+}
+
+
+</style>
+  
+  <script type = "text/javascript">
+          function displayNextImage() {
+              y = (y === images1.length - 1) ? 0 : y + 1;
+              document.getElementById("img2").src = images1[y];
+        x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img1").src = images[x];
+                      z = (z === images2.length - 1) ? 0 : z + 1;
+              document.getElementById("img3").src = images2[z];
+               z1 = (z1 === images3.length - 1) ? 0 : z1 + 1;
+              document.getElementById("img4").src = images3[z1];
+                             z3 = (z3 === images_bglr.length - 1) ? 0 : z1 + 1;
+              document.getElementById("img_bglr").src = images_bglr[z1];
+
+          }
+
+          function displayPreviousImage() {
+              y = (y <= 0) ? images1.length - 1 : y - 1;
+              document.getElementById("img2").src = images1[y];
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img1").src = images[x];
+                            z = (z <= 0) ? images2.length - 1 : z - 1;
+              document.getElementById("img3").src = images2[z];
+              z1 = (z1 <= 0) ? images3.length - 1 : z1 - 1;
+              document.getElementById("img4").src = images3[z1];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 3000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "img/cf161.jpg";
+          images[1] = "img/cf162.jpg";
+          images[2] = "img/cf2016.jpg";
+      
+          var images1 = [], y = -1;
+          images1[0] = "img/events/cm2_2.jpg";
+          images1[1] = "img/events/cm2_3.jpg";
+          images1[2] = "img/events/cm2_4.jpg";
+          images1[3] = "img/events/cm2_1.jpg";
+
+                    var images2 = [], z = -1;
+          images2[0] = "img/events/conf201502.jpg";
+          images2[1] = "img/events/conf201503.jpg";
+          images2[2] = "img/events/conf201501.jpg";
+  
+
+                    var images3 = [], z1 = -1;
+          images3[0] = "img/events/codemarathon3.jpg";
+          images3[1] = "img/events/codemarathonjan15.png";
+          images3[2] = "img/events/codemarathonjan_new1.jpg";
+          images3[3] = "img/events/codemarathonjan_new2.jpg"; 
+
+                    var images_bglr = [], z3 = -1;
+          images_bglr[0] = "img/gettogether2014.jpg";
+  </script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Defining the function
+    function animateHeight(){
+        var newHeight = $(".box-inner").height();
+        $(".box").animate({
+            height: newHeight,
+        }, 500);
+    }
+    $(".load-more").click(function(){
+        // Setting the initial height of the box
+        $(".box").height($(".box-inner").height());
+        animateHeight();
+    });
+});
+</script>
+</head>
+
+<body onload="startTimer()" class="no-js">
+  
+
+  
+     <!-- Fixed navbar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="containe-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php">CSES</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="index.php">Home</a></li>
+              <li><a href="aboutus.php">About</a></li>
+<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Initiatives <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.bufferedreader.org" target="blank">BufferedReader</a></li>
+                  <li><a href="codeism.php">Code ISM</a></li>
+                  <li><a href="index.aspx">Student Alumni Relationship Cell</a></li>
+                   <li><a href="speak_up.php">SpeakUp</a></li>
+                </ul>
+              </li>
+
+
+              <li class="active"><a href="events.php">Events</a></li>
+              <li><a href="members.php">Membership</a></li>
+              <li><a href="committee.php">CSES Team</a></li>
+             
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.aspx">Log In/Sign Up</a></li>
+             
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    <div style="width:auto;margin-right:auto;margin-left:auto;">
+    <div id="events_total" class="container-fluid">
+  
+</br>
+</br>
+</br>   
+<h1 style="color: black;">&nbsp;&nbsp;&nbsp;Events</h1>
+<div id="main-slider" class="slider liquid-slider box">
+    <div>
+      <h2 class="title">2016</h2>
+      <section>
+
+      <div class="container" >
+
+        <div class="row">
+
+          <div>
+            
+            <div class="VerticalTab fc_VerticalTab VerticalTab_1 tabs_ver_1 " style="width:83%;">
+            
+              <ul class="resp-tabs-list hor_1">
+                <li class="tabs-1"> <span class="tabs-text load-more">Confluence 2016</span></li>
+                <li class="tabs-2"><span class="tabs-text">Code Marathon 2.0</span></li>
+                <li class="tabs-3"><span class="tabs-text">Quiz Wiz 3.0</span></li>             
+                <li class="tabs-4"><span class="tabs-text load-more">Code Rush 2.0</span></li>
+              </ul>
+              
+              <div class="resp-tabs-container hor_1  box-inner" >
+                
+                <div class="fc-tab-1 tab" id="confluence">
+                
+                  <h2 class="title_contanier">Confluence 2016</h2>
+          
+                  <p>
+          <img id="img1" class="img-thumbnail" src="img/cf2016.jpg" style="height:400px;width:600px;clear:both;" /> 
+          <p>Alumni contribution is essential for the growth of the department. Ranging from parameters
+          like placement and internships to the counselling of young technocrats in preparing for and
+          pursuing an apt career, alumni have been a great help since time immemorial.The CSE
+          society aims to fortify the alumni-students relationship and acknowledges their valuable
+          contribution to the department and the institute.<p> Confluence – 2016, the Annual CSE Alumni meet was organized by the Computer Science and Engineering Society (CSES) of the Department of Computer Science & Engineering, ISM Dhanbad on 11 June 2016 at 7 Biryani’s Hotel, Bengaluru.</p><p> On behalf of the department, Dr. Chiranjeev Kumar (President of CSES & Head of CSE Department), Dr. Amgoth Tarachand (Faculty In-Charge of CSES & Assistant Professor of CSE Department) and about 35 undergraduate students of the department made their presence during the event.</p><p>One of the major objectives of the program was to strengthen the Alumni base of the Department and bring them under the umbrella of CSES, as the society firmly believes that the Alumni pay a significant contribution to the Department to fulfill its goals.</p>
+		  </p>
+ <!-- <br/><b>Venue : 7 Biryanis,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4th Floor, Lotus Building,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4th Block, Koramangala,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bengaluru, Karnataka -560034</b></p> -->
+          <!-- <input type="button" onclick="location.href='https://docs.google.com/forms/d/1N2MrqeF1gfweUc6n12xCU0JbP6X5RG1jnwWMz1GtoFk/viewform?c=0&w=1';" style="border-radius: 25px;background-color:#595959;cursor:pointer; height:41px;width:230px;font-size:16px;" value="Register for Confluence- 2016"> </input> -->
+		  <input type="button" onclick="location.href='downloads/reportConfluence2016.pdf';" style="border-radius: 25px;background-color:#595959;cursor:pointer; height:41px;width:230px;font-size:16px;" value="Report of Confluence-2016">
+		  </input>
+          </p>
+                </div>
+                
+                <div class="fc-tab-2 tab" id="marathon">
+                
+                  <h2 class="title_contanier">Code Marathon 2.0
+          <em style="font-size:20px;color:#cf5023; float:right;text-align:right;" >Sponsored By: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em>
+          <p style="font-size:18px;margin:4px;float:right;text-align:right;">B.Tech Class of 2007</p></h2>
+          
+          <img id="img2" class="img-thumbnail" src="img/events/cm2_1.jpg" />
+            <p><p>The Computer Science and Engineering Society & CodeISM in association with <b>B.Tech Class of 2007</b> bring you the biggest coding extravaganza of ISM, Code Marathon 2.0 starting from March 9, 2016.</p>
+            <p>Each of the contest is a standard type short contest of duration 3 hours to solve required problems. The rules are same as followed in ACM ICPC contests. To provide fair competition the contest is divided into 3 divisions.<BR> 
+            The first division is for the 3rd year / final year UG students/ PG students as well as for CSE alumni.<BR> The second and third divisions are for 2nd and 1st year students respectively.</p>
+            <p>Goodies will be given to the Top 10 students of each division based on the cumulative rankings.</p>
+            </p>
+        <ul style="text-align:justify; color:#999;">
+          <li>The contest consists of 4 contests of duration 3 hours. </li>
+          <li>Participation in all 4 contests is a must to grab prizes worth. By participation we mean atleast a single submission in each day of the contest.</li>
+          <li>. The contest ranking will be based on ACM ICPC ranking system and no partial points will be provided for partially correct answer. 
+          </li>
+          <li>Unlike Code Marathon 1.0 , this time it will be open for CSE Alumni as well.</li>
+          <li>. Prize Distribution is as follows :
+        <TABLE>
+                    <TR>
+                      <TD>
+                        <UL>
+                            <li ><strong style="color:#737373;">Div 1 (3,4, PG):</strong><br>
+                                I - 7500<br>
+                                II - 4500<br>
+                                III - 3000<br>
+                                IV & V - 1500<br>
+                            </li>
+                          </UL>
+                        </TD>
+                        <TD>
+                          <UL>
+                            <li><strong style="color:#737373;">Div 2 (2):</strong><br>
+                                I - 5000<br>
+                                II - 3500<br>
+                               III - 2500<br>
+                               IV & V - 1000<br>
+                            </li>
+                          </UL>
+                        </TD>
+                        <TD>
+                          <UL>
+                            <li><strong style="color:#737373;">Div 3 (I yr):</strong><br>
+                               I - 3000<br>
+                               II - 1500<br>
+                               III - 1000<br>
+                               IV & V - 500<br>
+                            </li>
+                          </UL>
+                        </TD>
+                      </TR>
+                    </TABLE>
+                    
+                    <li>T-shirts for top 10 in each Div.</li>
+                    <li>Only Students from Computer Science and Engineering, ISM Dhanbad , whether past/present , are eligible for prizes.</li>
+                </ul>
+                </div>
+                
+                <div class="tab fc-tab-3" id="quiz">
+                
+                  <h2 class="title_contanier" >Quiz Wiz 3.0</h2>
+                  <img class="img-thumbnail" src="img/events/quizwiz_3.jpg"/>
+                  <p><p>Computer Science and Engineering Society conducted its quizzing event Quiz-Wiz3.0 for the tech savvy, and the event got better with time.</p><p>The prelims were exclusive to the first years consisting of 26 questions based on general technical knowledge from which top 4 students were selected for second round. Top three winners of the small quiz event conducted  on social media were directly selected for the second round.</p><p> To improve the interaction among the students, it was mandatory for all teams in second round to have four members – one from each year. The second round consisted of 15 questions and top 5 teams were selected for mains round. The Mains round was further sub-divided into five sections, namely “Video Quiz Round”, “Who am I?”, “Name the company”, “Connect the Dots”, and a “General Round” where each round consisted of 10 questions.</p><p>The quiz was conducted by Aditya Kaushik, Soham Satyadharma, Dev Kothari,Sai Sumanth,Pranav Thombre, Yash Goel and Chinkal.</p><p>The Quiz ended with a fair share of excitement and a healthy competition. The teams displayed commendable competitive spirit, team-work and knowledge. It was a welcome distraction from the curriculum and certainly a learning experience.</p>
+          </p>
+                <table style="margin-left:3%;color: #999;" class="table table-striped table-hover" id="results_quizwiz" >
+                    <tr>
+                        <td><b style="color: #737373;">Team name</b></td>
+                        <td><b style="color: #737373;">Members</b></td>
+                        <td><b style="color: #737373;">Final Score&emsp;</b></td>
+                    </tr>
+
+                    <tr>
+                        <td>Gangs of Wassepur</td>
+                        <td>1. Nitin
+                            2. Aditya Rajesh Badole
+                            3. Aman Ranjan Thakur
+                            4. Abhinav Goyal
+                          </td>
+                        <td>135</td>
+                    </tr>
+                    <tr>
+                        <td>Misfits</td>
+                        <td>1. Anupam Wadhwa
+              2. Rishabh Thukral
+              3. Bhavisya Mathur
+              4. Ashish Mohan Verma
+                            </td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>Knighthood</td>
+                        <td>1. Aarush Juneja
+              2. Aadil Ahmed
+              3. Kirti Singh
+              4. Mohit Chawla</td>
+                          <td>80</td>
+          </tr>
+          
+          
+                  </table>
+                </div>
+                
+                <div class="tab fc-tab-4" id="coderush">
+                
+                  <h2 class="title_contanier" >Code Rush</h2>
+                  <img class="img-thumbnail" src="img/events/coderush.jpg" />
+                  <p><p>Coding and problem solving constitute the core of the Computer Science and Engineering industry.</p><p>Keeping this in mind, the CSE Society organised the second edition of Code Rush on August 14th,2015. Code Rush 2.0 was jointly organised by Rajesh Kumar Sinha, Raj Jha and Ashish Kumar from B.Tech Pre-Final Year.</p><p>Ther students were divided into three divisions: Division 1 for B.Tech Final Year, B.Tech prefinal Year, M.Techh and Reaearch Scholars, Division 2 for B.Tech 2nd Year and Division 3 for B.Tech 1st Year.</p><p>A total of 225 students participated across all divisions inn which Vamsi Krishna, Dev Kothari and Harmandeep Singh Kahlon emerged as winners. The winners were felicitated with a prize money of INR 2000.</p>
+          </p>
+                  
+                
+                </div>
+                
+                
+              </div>
+            </div>
+          
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </section>
+    </div>
+    <!-- Made by Aashish Kumar end of first slider tab -->
+    <div>
+      <h2 class="title">2015</h2>
+      <section>
+
+      <div class="container" >
+
+        <div class="row">
+
+          <div>
+            
+            <div class="VerticalTab fc_VerticalTab VerticalTab_1 tabs_ver_1" style="width:83%;">
+            
+              <ul class="resp-tabs-list hor_1">
+                <li class="tabs-1"> <span class="tabs-text">Confluence 2015</span></li>
+                <li class="tabs-2"><span class="tabs-text">Code Marathon 1.0</span></li>
+                <li class="tabs-3"><span class="tabs-text">Quiz Wiz 2.0</span></li>             
+                <li class="tabs-4"><span class="tabs-text">Code Rush 1.0</span></li>
+              </ul>
+              
+              <div class="resp-tabs-container hor_1" >
+                
+                <div class="tab fc-tab-1" id="confluence">
+                
+                  <h2 class="title_contanier">Confluence 2015</h2>
+          
+                  <p>
+                   <img id="img3" class="img-thumbnail" src="img/events/conf201501.jpg" style="height:400px;width:600px;clear:both;" /> 
+                   <p>An Interaction Programme (<b>Confluence – 2015</b>) with the Alumni of CSE, ISM Dhanbad, was organized by the Computer Science and Engineering Society (CSES) of the Department of the Computer Science & Engineering, ISM Dhanbad on <b>13 June 2015 at Officer’s Mess, Chief Engineer (Air Force), Palam, New Delhi</b>. On behalf the department, Dr. Chiranjeev Kumar (Associate Professor & Head of the Department), Dr. Arup Kumar Pal (Assistant Professor) and 04 current students of B.Tech (CSE) have participated in this programme. One of the objectives of the program was to strengthen the Alumni base of the Department and bring them under the umbrella of CSE Society (CSES). The society firmly believes that the Alumni can contribute to the Department significantly to fulfill its ambitions.</p>
+                   <input type="button" onclick="location.href='downloads/report_confluence2015.pdf';" style="border-radius: 25px;background-color:#595959;cursor:pointer; height:41px;width:230px;font-size:16px;" value="Report of Confluence -2015"> </input>
+                  </p>
+                </div>
+                
+                <div class="tab fc-tab-2" id="marathon">
+                
+                  <h2 class="title_contanier">Code Marathon 1.0
+                  <em style="font-size:20px;color:#cf5023; float:right;text-align:right;" >Sponsored By: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                  <p style="font-size:18px;margin:4px;float:right;text-align:right;">B.Tech Class of 2006 and Incresol</p>
+                  </h2>
+                  <img id="img4" class="img-thumbnail" src="img/events/codemarathon3.jpg" />
+                  <div>  
+                    <p >CodeMarathon was a competitive programming contest organised by the Computer Science and Engineering Society of Indian School of Mines, Dhanbad and CodeISM (the coding club of Department of Computer Science and Engineeing). The event was sponsored by Class of 2k6 of the department and Incresol with prizes worth more than Rs 75,000.</p>
+                   <p > CodeMarathon consisted of a series of coding contests of duration 2.5 hours. The rules are same as followed in ACM ICPC contests. To provide fair competition the contest had been divided into 3 divisions: first division was for the 3rd year & final year UG students as well as for PG students. The second and third divisions were for 2nd and 1st year students respectively.</p>
+                   <p>
+                    A cumulative ranking was calculated for each division based on the performance in each of the contests. Prizes and Goodies will be given to the Top 20 students of each division based on the cumulative rankings.
+                   </p>
+                  </div>
+                  <h3 style="padding-top:1% ; padding-left:3%;clear:both;color: #999;"> Results</h3>
+                  <table  style="margin-left:3%;color: #999;"class="table table-striped table-hover" id="marathon_results">
+                         <tr>
+                          <td><b style="color: #737373;">Rank</b></td> 
+                          <td><b style="color: #737373;">DIV I</b></td>
+                          <td><b style="color: #737373;">DIV II</b></td>
+                          <td><b style="color: #737373;">DIV III</b></td>
+                        </tr>
+                        <tr>
+                          <td>1.</td> 
+                          <td>Majeed Siddiqui</td>
+                          <td>Vamsi Krishna</td>
+                          <td>Aditya Kaushik</td> 
+                        </tr>
+                        <tr>  
+                          <td>2.</td>
+                          <td>Naman Taneja</td>  
+                          <td>Srinivas Devaki</td> 
+                          <td>Digvijay Singh</td>
+                        </tr>
+                        <tr>
+                           <td>3.</td> 
+                           <td>Prayank Mathur</td>
+                           <td>Rajesh Kumar Sinha</td> 
+                           <td>Ankit Kumar</td> 
+                         </tr>
+                      </table>
+                    <div id="coderush" style="margin-left:3%;" class="btn-group btn-group-lg">
+                      <input type="button" onclick="location.href='downloads/div1.xlsx';" style="border-radius: 25px;background-color:#595959;cursor:pointer; height:41px;width:180px;font-size:16px;" value="Result DIV I"> </input>
+                      <input type="button" onclick="location.href='downloads/div2.xlsx';" style="border-radius: 25px;background-color:#595959;cursor:pointer; height:41px;width:180px;font-size:16px;" value="Result DIV II"> </input>
+                      <input type="button" onclick="location.href='downloads/div3.xlsx';" style="border-radius: 25px;background-color:#595959;cursor:pointer; height:41px;width:180px;font-size:16px;" value="Result DIV III"> </input>
+
+                    </div>
+                    </br>
+                    </br>
+              </div>
+                
+                <div class="tab fc-tab-3" id="quiz">
+                
+                  <h2 class="title_contanier" >Quiz Wiz 2.0</h2>
+                  <img class="img-thumbnail" src="img/events/quizwiz2.jpg"/>
+                            <p >  The Computer Science and Engineering Society (CSES) organized a technical quiz – QUIZ Wiz v2.0 on the 13th of September, 2014. The Quiz was organized to test the general technical knowledge of the students and as a means to encourage students of different years to interact with each other.
+</p><p>The preliminary round was followed by mains having 5 rounds. Round 1 consisted of 15 questions & then next 4 rounds consisted of 5 questions each. The questions also included visual questions like logos, popular personalities and visual connects, among other general quiz questions. Also included in the Quiz was the ‘Simple Pounce’ rule. According to this rule any team could answer a question directed to another team if they didn’t wish to wait for the question to be passed to them in the general order. However, negative marks were awarded on incorrectly answering such a ‘pounced’ question. Any team could also bar the Quiz-master from providing any hints, by using the ‘Block’ option, even if the question was directed to another team. With a blend of interesting rules and a few tricky questions, the teams still managed to score well, with ‘The Misfits’ bagging the top position. The top three teams were as follows:
+</p>
+ <table style="margin-left:3%;color: #999;" class="table table-striped table-hover" id="results_quizwiz">
+                      <tr>
+                        <td><b style="color: #737373;">Team name</b></td>
+                        <td><b style="color: #737373;">Members</b></td>
+                        <td><b style="color: #737373;">Final Score&emsp;</b></td>
+                      </tr>
+
+                      <tr>
+                        <td>The Misfits</td>
+                        <td>1. Rishabh Thukral
+                            2. Bhavishya Mathur
+                            3.Ashish Verma
+                            4. Mohit Punjabi
+                          </td>
+                        <td>135</td>
+                      </tr>
+                      <tr>
+                        <td>Vanquishers</td>
+                        <td>1. Aditya Pandey
+
+2. Raj Roushan
+
+3. Abhinav Goyal
+
+4. Ashish Bahukhandi
+                            </td>
+                        <td>90</td>
+                      </tr>
+                      <tr>
+                        <td>Seinstein</td>
+                        <td>1.  Dev Kothari
+
+2.  Pratik Jain
+
+3.  Shubham Chauhan
+
+4.  Sourav Kothari</td>
+                          <td>80</td>
+                      </tr>
+                  </table>
+
+                </div>
+                
+                <div class="tab fc-tab-4" id="coderush">
+                
+                  <h2 class="title_contanier" >Code Rush 1.0</h2>
+                  <img class="img-thumbnail" src="img/events/coderush2nov14.jpg" />
+                  <p>CodeRush was organized on 2nd of November, 2014 by Computer Science & Engineering Society. Anant Kumar and Nishant Raj (B.Tech, 2016) were the event organizers. The first and second year students competed in first group and the rest of the students inlcuding third final year UG, PG students and research scholars competed in another. The contest lasted for two and a half hours. Raj and Majeed Siddiqui stood first in Group 1 and Group 2 respectively.</p>
+                  
+                
+                </div>
+                
+                
+              </div>
+            </div>
+          
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </section>
+    </div>
+    <!-- ENd of Second Slider tab Made By Aashish Kumar-->
+     <div>
+      <h2 class="title">2014</h2>
+      <section>
+
+      <div class="container" >
+
+        <div class="row">
+
+          <div>
+            
+            <div class="VerticalTab fc_VerticalTab VerticalTab_1 tabs_ver_1 " style="width:83%;">
+            
+              <ul class="resp-tabs-list hor_1">
+                <li class="tabs-1"> <span class="tabs-text load-more">Confluence 2014</span></li>
+                <li class="tabs-2"><span class="tabs-text">Quiz Wiz 1.0</span></li>
+              </ul>
+              
+              <div class="resp-tabs-container hor_1  box-inner" >
+                
+                <div class="fc-tab-1 tab" id="bnglr2014">
+                
+                  <h2 class="title_contanier">Confluence 2014</h2>
+          
+                  <p>
+          <img id="img_bglr" class="img-thumbnail" src="img/events/gettogether2014.jpg" style="height:400px;width:600px;clear:both;" /> 
+          <p>An Interaction Programme with the Alumni of CSE, ISM Dhanbad, was organized by the Computer Science and Engineering Society (CSES) of the Department of the Computer Science & Engineering, ISM Dhanbad on 14 June 2014 at Premier Inn Hotel, Bengaluru. On behalf the department, Dr. Chiranjeev Kumar (Associate Professor & Head of the Department), Mr. Tarachand Amgoth (Assistant Professor) and 42 students of VII B.Tech (CSE) who are pursuing their internship at Bengaluru have participated in this programme. One of the objectives of the program was to strengthen the Alumni base of the Department and bring them under the umbrella of CSE Society (CSES). The society also believes that the Alumni can contribute to the Department significantly to fulfill its ambitions.</p>
+          <input type="button" onclick="location.href='downloads/Report.pdf';" style="border-radius: 25px;background-color:#595959;cursor:pointer; height:41px;width:230px;font-size:16px;" value="Report of Confluence-2014"> </input>
+
+          </p>
+                  </p>
+                </div>
+                
+                <div class="fc-tab-2 tab" id="quizwiz1.0">
+                
+                  <h2 class="title_contanier">Quiz Wiz 1.0</h2>
+            <p>The Computer Science and Engineering Society (CSES) organized the first edition of its technical quiz, Quiz-Wiz on 4th April, 2014. The Quiz was organized to test the general technical knowledge of the students and as a means to encourage students of different years to interact with each other. Keeping this in mind, it was mandatory for all teams to have four members – one from each year.<br>
+              The winners were:<br>
+               <ul style="text-align:justify; color:#999;">
+          <li>1. Team Do Not Panic<br>
+Rajat Gupta<br>
+Abhinav Goyal<br>
+Yogendra Singh<br>
+Sakshi Gopal</li>
+          <li>2. Team Sparsh<br>
+Sparsh Choudhary<br>
+Sajid Hussain<br>
+Saurav Kothari<br>
+Aritra Gupta</li>
+          <li>3. The Misfits<br>
+Kriti Singh<br>
+Ashish Verma<br>
+Mohit Punjabi<br>
+Vishesh Srivastava<br>
+          </li>
+        </ul>
+            </p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </section>
+    </div>
+  </div>
+ 
+  </div>
+  </div>
+ <br />
+ <br />
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<?php footer(); ?>
+
+
+<!-- Animaation Scripts-->  
+<script src="js/jquery-1.9.0.min.js"></script>  
+<script src="js/bootstrap.js"></script> 
+<script type="text/javascript">
+var tabs = $("#tabs").tabs({heightStyle: "fill"});
+</script>
+<script type="text/javascript">
+$( "#slider" ).slider({ autoHeight: false;height:1185 px });
+</script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="js/jsSwitcher/jquery.cookie.js"></script> 
+  <script type="text/javascript" src="js/jsSwitcher/switcher.js"></script>
+  <script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
+  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript" src="js/tabs.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+  <script src="js/jquery.liquid-slider.min.js"></script>  
+  <script>
+    /**
+     * If you need to access the internal property or methods, use this:
+     * var api = $.data( $('#main-slider')[0], 'liquidSlider');
+     * console.log(api);
+     */
+    $('#main-slider').liquidSlider();
+  </script>
+
+<!-- end of Animaation Scripts--> 
+
+  </body>
+</html>

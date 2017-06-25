@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSES|CodeISM</title>
+<!-- Bootstrap -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="css/style1.min.css">
+<link rel="stylesheet" href="css/memberstyle.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- start plugins -->
+<link href="css/carousal.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/libs/animate.css">
+<link rel="stylesheet" href="css/site.css">
+<link href="css/blog.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href="css/owl.carousel.css" rel="stylesheet">
+
+
+<!-- end Linking CSS-->
+<style type="text/css">
+#functions_aboutus
+{
+    color:rgb(0,153,255);
+}
+#about_us
+{
+
+    text-align: justify;
+
+
+}
+
+#codeism {
+
+	top:30%;
+	height: 40%;
+	width: 80%;
+	margin-left:10%;
+	text-align: justify;
+  font-family:cursive;
+}
+
+#codeism h1{
+  text-align: center;
+
+}
+#para{
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+h2
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color:#444444;
+}
+li
+{
+    line-height: 2;
+}
+strong
+{
+    font-size: 18px;
+}
+#Footer
+{
+
+
+}
+a#functions_aboutus_navlink
+{
+    color:rgb(0,153,255);
+}
+</style>
+<style>
+ul.tab {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+border: 1px solid #ccc;
+background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+display: inline-block;
+color: black;
+text-align: center;
+padding: 14px 8px;
+text-decoration: none;
+transition: 0.3s;
+font-size: 14px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+display: none;
+padding: 1px 1px;
+border: 1px solid #ccc;
+border-top: none;
+}
+#mainrow.h3{
+  top:50%;
+}
+
+</style>
+
+<link href="css/owl.carousel.css" rel="stylesheet">
+
+<!-- start slider -->
+<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+<script type="text/javascript" src="js/jquery.cslider.js"></script>
+<script src="js/owl.carousel.js"></script>
+
+    <script>
+      $(document).ready(function() {
+
+        $("#owl-demo").owlCarousel({
+          items : 4,
+          lazyLoad : true,
+          autoPlay : true,
+          navigation : true,
+          navigationText : ["", ""],
+          rewindNav : true,
+          scrollPerPage : false,
+          pagination : false,
+          paginationNumbers : false,
+        });
+
+      });
+    </script>
+    <!-- Owl Carousel Assets -->
+    <script src="js/owl.carousel.js"/>
+    		<script>
+    			$(document).ready(function() {
+
+    				$("#owl-demo").owlCarousel({
+    					items : 4,
+    					lazyLoad : true,
+    					autoPlay : true,
+    					navigation : true,
+    					navigationText : ["", ""],
+    					rewindNav : false,
+    					scrollPerPage : false,
+    					pagination : false,
+    					paginationNumbers : false,
+    				});
+
+    			});
+    		</script>
+        <script>
+        $(document).ready(function () {
+
+        initialize_owl($('#owl1'));
+
+        $('a[href="#home"]').on('shown.bs.tab', function () {
+            initialize_owl($('#owl1'));
+        }).on('hide.bs.tab', function () {
+            destroy_owl($('#owl1'));
+        });
+
+        $('a[href="#profile"]').on('shown.bs.tab', function () {
+            initialize_owl($('#owl2'));
+        }).on('hide.bs.tab', function () {
+            destroy_owl($('#owl2'));
+        });
+
+        $('a[href="#messages"]').on('shown.bs.tab', function () {
+            initialize_owl($('#owl3'));
+        }).on('hide.bs.tab', function () {
+            destroy_owl($('#owl3'));
+        });
+
+        $('a[href="#settings"]').on('shown.bs.tab', function () {
+            initialize_owl($('#owl4'));
+        }).on('hide.bs.tab', function () {
+            destroy_owl($('#owl4'));
+        });
+    });
+
+    function initialize_owl(el) {
+        el.owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: false
+                }
+            }
+        });
+    }
+
+    function destroy_owl(el) {
+        el.data('owlCarousel').destroy();
+    }
+        </script>
+
+        <script>
+      $(document).ready(function() {
+        $('ul.tabs').each(function(){
+          var active, content, links = $(this).find('a');
+          active = links.first().addClass('active');
+          content = $(active.attr('href'));
+          links.not(':first').each(function () {
+            $($(this).attr('href')).hide();
+          });
+          $(this).find('a').click(function(e){
+            active.removeClass('active');
+            content.hide();
+            active = $(this);
+            content = $($(this).attr('href'));
+            active.addClass('active');
+            content.show();
+            return false;
+          });
+        });
+      });
+    </script>
+
+
+<script>
+function openCity(evt, cityName) {
+// Declare all variables
+var i, tabcontent, tablinks;
+
+// Get all elements with class="tabcontent" and hide them
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+
+// Get all elements with class="tablinks" and remove the class "active"
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+// Show the current tab, and add an "active" class to the link that opened the tab
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}</script>
+
+	<script type="text/javascript">
+			$(function() {
+
+				$('#da-slider').cslider({
+					autoplay : true,
+					bgincrement : 450
+				});
+
+			});
+		</script>
+    <script>
+    jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+        e.preventDefault();
+    });
+});
+</script>
+		<!-- //Owl Carousel Assets -->
+</head>
+<body>
+	<div class="container-fluid">
+<!-- Fixed navbar -->
+		 <nav class="navbar navbar-inverse navbar-fixed-top">
+			 <div class="containe-fluid">
+				 <div class="navbar-header">
+					 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						 <span class="sr-only">Toggle navigation</span>
+						 <span class="icon-bar"></span>
+						 <span class="icon-bar"></span>
+						 <span class="icon-bar"></span>
+					 </button>
+					 <a class="navbar-brand" href="index.php">CSES</a>
+				 </div>
+				 <div id="navbar" class="navbar-collapse collapse">
+					 <ul class="nav navbar-nav navbar-left">
+						 <li ><a href="index.php">Home</a></li>
+						 <li ><a  href="aboutus.php">About</a></li>
+						 <li class="dropdown">
+						<a href="#" class="dropdown-toggle" class="active" data-toggle="dropdown" role="button" >Initiatives <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="http://www.bufferedreader.org" target="blank">BufferedReader</a></li>
+							<li><a href="codeism.html">Code ISM</a></li>
+							<li><a href="index.aspx">Student Alumni Relationship Cell</a></li>
+							 <li><a href="speak_up.php">SpeakUp</a></li>
+						</ul>
+					</li>
+						 <li><a href="events.php">Events</a></li>
+						 <li><a href="members.php">Membership</a></li>
+							<li><a href="committee.php">CSES Team</a></li>
+
+					 </ul>
+					 <ul class="nav navbar-nav navbar-right">
+						<li><a href="index.aspx">Log In/Sign Up</a></li>
+
+
+					 </ul>
+				 </div><!--/.nav-collapse -->
+			 </div>
+		 </nav>
+     <br>
+
+
+   <div id="codeism">
+    <h1>Code ISM</h1>
+  </div>
+  <div class="main_btm"><!-- start main_btm -->
+  	<div class="container">
+  		<div class="main row">
+  			<div class="col-md-6 content_left">
+  				<img src="img/coding.jpg" alt="" class="img-responsive">
+  			</div>
+  			<div class="col-md-6 content_right">
+  				<p class="para">Coding and problem solving constitute the core of the Computer Science and Engineering industry. Keeping this in mind, the department has taken its first step towards developing a sound coding aptitude and a healthy coding culture among the students by establishing a coding club. The club “CodeISM”, abiding its motto of knowledge sharing, will act as a forum for discussion and exchange of ideas and experiences on various topics related to coding and problem solving among its members. From time to time, it will also arrange lectures by the best coders of the institute. It will surely bridge the gap between the theoretical knowledge learnt and its practical application in the industry. Moreover, the club will also promote participation in various nationally and internationally renowned coding competitions.
+
+  CodeISM has also recognized that the need of the hour is to provide placement and internship oriented lectures for the students to survive the rigorous coding and interview rounds. The club has come up with a series of eight lectures on popular topics like data structures, algorithms and strings, to make students adept in problem solving with placements and internships as the prime focus.
+
+  With such a start, coding club will surely become an integral part of departmental culture, taking the name of the department to distances still undiscovered, in the coming years.
+   </p></div>
+  		</div>
+
+
+
+      <div class="container">
+        <div class="main row">
+          <h3>Objectives</h3>
+
+    <br>
+          <div class="col-md-3 images_1_of_4 text-center">
+            <span class="bg"><i class="fa fa-globe"></i></span>
+            <h4><a href="#">Knowledge Sharing</a></h4>
+            <p>Programming is about writing the instructions which a computer follows to enable it to store knowledge, process knowledge, and communicate knowledge with the outside world.</p>
+            <p>
+          </div>
+          <div class="col-md-3 images_1_of_4 bg1 text-center">
+            <span class="bg"><i class="fa fa-laptop"></i></span>
+            <h4><a href="#">Coding<br> Aptitude</a></h4>
+
+            <p>While being able to simply ask the machine for what you need gives you some results, knowing how to clearly tell it what to do cangive you more personalised results and make any automatable tasks easier to automate.
+    This can be acheived by codes of lines.</p>
+          </div>
+          <div class="col-md-3 images_1_of_4 bg1 text-center">
+
+            <span class="bg"><i class="fa fa-cog"></i></span>
+            <h4><a href="#">Problem <br>Solving</a></h4>
+            <p> Understanding the problem; plans; top-down design / stepwise refinement; recognition of similarities between problems leading to adaptation and reuse.</p>  </div>
+          <div class="col-md-3 images_1_of_4 bg1 text-center">
+            <span class="bg"><i class="fa fa-shield"></i> </span>
+            <h4><a href="#">Ideas & Experience</a></h4>
+            <p>A powerful social learning strategy that creates an environment of learning is through sharing experiences. Experiences are personal – but there is a lot of learning that can be derived from them as well. </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- end main -->
+    <br>
+
+<!-- Fixed navbar -->
+<ul class="tab">
+<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')">2016-17</a></li>
+<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">2015-16</a></li>
+<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">2014-15</a></li>
+</ul>
+
+<div id="London" class="tabcontent" >
+<h3></h3>
+<p></p>
+<div class="tab-content">
+<div id="tab1" class="tab">
+<div id="owl-demo" class="owl-carousel text-center">
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/abhishek.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Abhishek Jaiswal</a></h4>
+    <p>
+    <!--	Lorem ipsum dolor amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.-->
+    </p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/ayush.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Ayush Khandelwal</a></h4>
+    <p>
+    <!--	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,-->
+    </p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/deepak.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Deepak Kumar</a></h4>
+    <p>
+    <!--	On the other hand, we denounce with righteous indignation and dislike men who are so beguiled  pleasure of the moment,-->
+    </p>
+  </div>
+</div>
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/jayant.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Jayant Sharma</a></h4>
+    <p>
+      <!--Lorem ipsum dolor amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.-->
+    </p>
+  </div>
+</div>
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/nitin.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Nitin Paliwal</a></h4>
+    <p>
+
+    </p>
+  </div>
+</div>
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img//rishabht.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Rishabh Thakral</a></h4>
+    <p>
+
+    </p>
+  </div>
+</div>
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/vaibhav.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Vaibhav Goyal</a></h4>
+    <p>
+
+    </p>
+  </div>
+</div>
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/rohit.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Rohit Singh</a></h4>
+    <p>
+
+    </p>
+  </div>
+</div>
+
+</div>
+<!----//End-img-cursual---->
+</div>
+</div>
+</div>
+
+<div id="Paris" class="tabcontent" >
+<h3></h3>
+<p></p>
+<div class="tab-content">
+<div id="tab1" class="tab">
+<div id="owl-demo" class="owl-carousel text-center">
+<div class="item">
+  <div class="cau_left">
+    <img class="lazyOwl" data-src="img/abhishek.jpg" alt="Lazy Owl Image">
+  </div>
+  <div class="cau_left">
+    <h4><a href="#">Abhishek Jaiswal</a></h4>
+    <p>
+    <!--	Lorem ipsum dolor amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.-->
+    </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+<!--
+<footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-7">
+                        <h3>Location</h3>
+                        <p>Computer Science & Engineering<br>Technological Avenue
+
+                            <br>IIT- ISM ,Dhanbad, Jharkhand 826004</p>
+                    </div>
+                    <div class="footer-col col-md-4" text-align="right">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-map-marker"></i></a>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+<!-- Animaation Scripts-->
+
+
+<!-- end of Animaation Scripts-->
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
